@@ -13,7 +13,7 @@
     You should have received a copy of the GNU Lesser General Public License
     along with Vault.  If not, see <http://www.gnu.org/licenses/>.
  */
-package me.boomboompower.itempickupnotifier;
+package net.milkbowl.vault.item;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -33,16 +33,21 @@ public class ItemInfo {
     public ItemInfo(String[][] search, Material material) {
     	String NMSName = CraftItemStack.asNMSCopy(new ItemStack(material)).getItem().getName() + ".name";
     	String name = LocaleI18n.get(NMSName);
+    	
+    	testName(name, search);
+    	
         this.material = material;
         this.name = name;
         this.subTypeId = 0;
         this.search = search.clone();
-        Bukkit.getConsoleSender().sendMessage("Logged " + name + " with arguments " + search + " for item " + material);
     }
 
     public ItemInfo(String[][] search, Material material, short subTypeId) {
     	String NMSName = CraftItemStack.asNMSCopy(new ItemStack(material)).getItem().getName() + ".name";
     	String name = LocaleI18n.get(NMSName);
+    	
+    	testName(name, search);
+    	
         this.name = name;
         this.material = material;
         this.subTypeId = subTypeId;
@@ -111,5 +116,24 @@ public class ItemInfo {
         } else {
             return ((ItemInfo) obj).material == this.material && ((ItemInfo) obj).subTypeId == this.subTypeId;
         }
+    }
+    
+    public void testName(String name, String[][] args) {
+    	switch(args.toString().toLowerCase()) {
+    	case "ext":
+    		name = name + " (Extended)";
+    	case "rev":
+    		name = name + "(Reverted)";
+    	case "i":
+    		name = name + " I";
+    	case "1":
+    		name = name + " I";
+    	case "ii":
+    		name = name + " II";
+    	case "2":
+    		name = name + " II";
+    	default:
+    		name = name + "";
+    	}
     }
 }
