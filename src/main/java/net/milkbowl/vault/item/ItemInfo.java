@@ -17,7 +17,10 @@ package me.boomboompower.itempickupnotifier;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.craftbukkit.v1_9_R1.inventory.CraftItemStack;
 import org.bukkit.inventory.ItemStack;
+
+import net.minecraft.server.v1_9_R1.LocaleI18n;
 
 @SuppressWarnings({"deprecation"})
 public class ItemInfo {
@@ -28,6 +31,8 @@ public class ItemInfo {
     public final String[][] search;
     
     public ItemInfo(String name, String[][] search, Material material) {
+    	String NMSName = CraftItemStack.asNMSCopy(new ItemStack(material)).getItem().getName() + ".name";
+    	name = LocaleI18n.get(NMSName);
         this.material = material;
         this.name = name;
         this.subTypeId = 0;
@@ -36,6 +41,8 @@ public class ItemInfo {
     }
 
     public ItemInfo(String name, String[][] search, Material material, short subTypeId) {
+    	String NMSName = CraftItemStack.asNMSCopy(new ItemStack(material)).getItem().getName() + ".name";
+    	name = LocaleI18n.get(NMSName);
         this.name = name;
         this.material = material;
         this.subTypeId = subTypeId;
@@ -91,7 +98,7 @@ public class ItemInfo {
     @Override
     public String toString() {
         return String.format("%s[%d:%d]", name, material.getId(), subTypeId);
-    }
+    }	
     
     @Override
     public boolean equals(Object obj) {
