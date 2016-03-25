@@ -30,9 +30,9 @@ public class ItemInfo {
     public final String name;
     public final String[][] search;
     
-    public ItemInfo(String name, String[][] search, Material material) {
+    public ItemInfo(String[][] search, Material material) {
     	String NMSName = CraftItemStack.asNMSCopy(new ItemStack(material)).getItem().getName() + ".name";
-    	name = LocaleI18n.get(NMSName);
+    	String name = LocaleI18n.get(NMSName);
         this.material = material;
         this.name = name;
         this.subTypeId = 0;
@@ -40,9 +40,9 @@ public class ItemInfo {
         Bukkit.getConsoleSender().sendMessage("Logged " + name + " with arguments " + search + " for item " + material);
     }
 
-    public ItemInfo(String name, String[][] search, Material material, short subTypeId) {
+    public ItemInfo(String[][] search, Material material, short subTypeId) {
     	String NMSName = CraftItemStack.asNMSCopy(new ItemStack(material)).getItem().getName() + ".name";
-    	name = LocaleI18n.get(NMSName);
+    	String name = LocaleI18n.get(NMSName);
         this.name = name;
         this.material = material;
         this.subTypeId = subTypeId;
