@@ -39,24 +39,24 @@ public class Items {
 
     static {
         //1.9 Blocks & Items
-        items.add(new ItemInfo("End Rod", new String[][]{{"end", "rod"}}, Material.END_ROD));
-        items.add(new ItemInfo("Chorus Plant", new String[][]{{"chor", "plan"}}, Material.CHORUS_PLANT));
-        items.add(new ItemInfo("Chorus Flower", new String[][]{{"chor", "flow"}}, Material.CHORUS_FLOWER));
-        items.add(new ItemInfo("Purpur Block", new String[][]{{"purp", "bloc"}}, Material.PURPUR_BLOCK));
-        items.add(new ItemInfo("Purpur Slab", new String[][]{{"purp", "slab"}, {"qua", "step"}}, Material.PURPUR_SLAB));
-        items.add(new ItemInfo("Purpur Double Slab", new String[][]{{"purp", "dou", "sla"}, {"qua", "dou", "step"}}, Material.PURPUR_DOUBLE_SLAB));
-        items.add(new ItemInfo("Purpur Stairs", new String[][]{{"purp", "stair"}}, Material.PURPUR_STAIRS));
-        items.add(new ItemInfo("Purpur Pillar", new String[][]{{"purp", "pill"}}, Material.PURPUR_PILLAR));        
-        items.add(new ItemInfo("End Brick", new String[][]{{"end", "bri"}}, Material.END_BRICKS));
-        items.add(new ItemInfo("Beetroot Block", new String[][]{{"beet", "bloc"}}, Material.BEETROOT_BLOCK));
-        items.add(new ItemInfo("Repeating Command Block", new String[][]{{"rep", "comm"}}, Material.COMMAND_REPEATING));
-        items.add(new ItemInfo("Chain Command Block", new String[][]{{"chai", "comm"}}, Material.COMMAND_CHAIN));
-        items.add(new ItemInfo("End Crystal", new String[][]{{"end", "crys"}}, Material.END_CRYSTAL));
-        items.add(new ItemInfo("Chorus Fruit", new String[][]{{"chor", "fruit"}}, Material.CHORUS_FRUIT));
-        items.add(new ItemInfo("Popped Chorus Fruit", new String[][]{{"pop", "chor", "fruit"}}, Material.CHORUS_FRUIT_POPPED));
-        items.add(new ItemInfo("Beetroot", new String[][]{{"beet", "root"}}, Material.BEETROOT));
-        items.add(new ItemInfo("Beetroot Seeds", new String[][]{{"beet", "root", "seed"}}, Material.BEETROOT_SEEDS));
-        items.add(new ItemInfo("Beetroot Soup", new String[][]{{"beet", "root", "soup"}, {"soup","beet"}}, Material.BEETROOT_SOUP));
+        items.add(new ItemInfo(new String[][]{{"end", "rod"}}, Material.END_ROD));
+        items.add(new ItemInfo(new String[][]{{"chor", "plan"}}, Material.CHORUS_PLANT));
+        items.add(new ItemInfo(new String[][]{{"chor", "flow"}}, Material.CHORUS_FLOWER));
+        items.add(new ItemInfo(new String[][]{{"purp", "bloc"}}, Material.PURPUR_BLOCK));
+        items.add(new ItemInfo(new String[][]{{"purp", "slab"}, {"qua", "step"}}, Material.PURPUR_SLAB));
+        items.add(new ItemInfo(new String[][]{{"purp", "dou", "sla"}, {"qua", "dou", "step"}}, Material.PURPUR_DOUBLE_SLAB));
+        items.add(new ItemInfo(new String[][]{{"purp", "stair"}}, Material.PURPUR_STAIRS));
+        items.add(new ItemInfo(new String[][]{{"purp", "pill"}}, Material.PURPUR_PILLAR));        
+        items.add(new ItemInfo(new String[][]{{"end", "bri"}}, Material.END_BRICKS));
+        items.add(new ItemInfo(new String[][]{{"beet", "bloc"}}, Material.BEETROOT_BLOCK));
+        items.add(new ItemInfo(new String[][]{{"rep", "comm"}}, Material.COMMAND_REPEATING));
+        items.add(new ItemInfo(new String[][]{{"chai", "comm"}}, Material.COMMAND_CHAIN));
+        items.add(new ItemInfo(new String[][]{{"end", "crys"}}, Material.END_CRYSTAL));
+        items.add(new ItemInfo(new String[][]{{"chor", "fruit"}}, Material.CHORUS_FRUIT));
+        items.add(new ItemInfo(new String[][]{{"pop", "chor", "fruit"}}, Material.CHORUS_FRUIT_POPPED));
+        items.add(new ItemInfo(new String[][]{{"beet", "root"}}, Material.BEETROOT));
+        items.add(new ItemInfo(new String[][]{{"beet", "root", "seed"}}, Material.BEETROOT_SEEDS));
+        items.add(new ItemInfo(new String[][]{{"beet", "root", "soup"}, {"soup","beet"}}, Material.BEETROOT_SOUP));
         items.add(new ItemInfo("Dragons Breath", new String[][]{{"drag", "brea"}}, Material.DRAGONS_BREATH));
         items.add(new ItemInfo("Beetroot Block", new String[][]{{"beet", "bloc"}}, Material.BEETROOT_BLOCK));
         items.add(new ItemInfo("Elytra", new String[][]{{"elyt"}}, Material.ELYTRA));
