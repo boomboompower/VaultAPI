@@ -19,6 +19,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
+@SuppressWarnings({"deprecation"})
 public class ItemInfo {
 
     public final Material material;
@@ -86,8 +87,7 @@ public class ItemInfo {
     public ItemStack toStack() {
         return new ItemStack(this.material, 1, subTypeId);
     }
-
-    @SuppressWarnings("deprecation")
+    
     @Override
     public String toString() {
         return String.format("%s[%d:%d]", name, material.getId(), subTypeId);
