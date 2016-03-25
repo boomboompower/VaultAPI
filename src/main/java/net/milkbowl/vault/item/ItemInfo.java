@@ -123,7 +123,7 @@ public class ItemInfo {
     	case "ext":
     		name = name + " (Extended)";
     	case "rev":
-    		name = name + "(Reverted)";
+    		name = name + " (Reverted)";
     	case "i":
     		name = name + " I";
     	case "1":
