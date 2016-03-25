@@ -13,8 +13,9 @@
     You should have received a copy of the GNU Lesser General Public License
     along with Vault.  If not, see <http://www.gnu.org/licenses/>.
  */
-package net.milkbowl.vault.item;
+package me.boomboompower.itempickupnotifier;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
@@ -30,6 +31,7 @@ public class ItemInfo {
         this.name = name;
         this.subTypeId = 0;
         this.search = search.clone();
+        Bukkit.getConsoleSender().sendMessage("Logged " + name + " with arguments " + search + " for item " + material);
     }
 
     public ItemInfo(String name, String[][] search, Material material, short subTypeId) {
@@ -37,6 +39,7 @@ public class ItemInfo {
         this.material = material;
         this.subTypeId = subTypeId;
         this.search = search.clone();
+        Bukkit.getConsoleSender().sendMessage("Logged " + name + " with arguments " + search + " for item " + material + " SubID(" + subTypeId + ").");
     }
 
     public Material getType() {
