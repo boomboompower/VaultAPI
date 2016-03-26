@@ -49,8 +49,6 @@ public class ItemInfo {
     	
     	testName(name, search);
     	
-    	if (material.equals(Material.WOOL)) tryWool(name, material, subTypeId);
-    	
         this.name = name;
         this.material = material;
         this.subTypeId = subTypeId;
@@ -124,48 +122,41 @@ public class ItemInfo {
     public void tryWool(String name, Material material, short type) {
     	if (!material.equals(Material.WOOL)) return;
     	switch(type) {
-    	case 1: name = "Orange wool"; break;
-    	case 2: name = "Magenta wool"; break;
-    	case 3: name = "Light blue wool"; break;
-    	case 4: name = "Yellow wool"; break;
-    	case 5: name = "Lime wool"; break;
-    	case 6: name = "Pink wool"; break;
-    	case 7: name = "Gray wool"; break;
-    	case 8: name = "Light gray wool";break;
-    	case 9: name = "Cyan wool"; break;
-    	case 10: name = "Purple wool"; break;
-    	case 11: name = "Blue wool"; break;
-    	case 12: name = "Brown wool"; break;
-    	case 13: name = "Green wool"; break;
-    	case 14: name = "Red wool"; break;
-    	case 15: name = "Black wool"; break;
-    	default: name = "White wool"; break;
+    	
     	}	
     }
     
     public void testName(String name, String[][] args) {
     	switch(args.toString().toLowerCase()) {
-    	case "ext":
-    		name = name + " (Extended)";
-    		break;
-    	case "rev":
-    		name = name + " (Reverted)";
-    		break;
-    	case "i":
-    		name = name + " I";
-    		break;
-    	case "1":
-    		name = name + " I";
-    		break;
-    	case "ii":
-    		name = name + " II";
-    		break;
-    	case "2":
-    		name = name + " II";
-    		break;
-    	default:
-    		name = name + "";
-    		break;
+    	
+    	/* Changing potion names to have potency. */
+    	case "ext": name = name + " (Extended)"; break;
+    	case "rev": name = name + " (Reverted)"; break;
+    	case "i": name = name + " I"; break;
+    	case "1": name = name + " I"; break;
+    	case "ii": name = name + " II"; break;
+    	case "2": name = name + " II"; break;
+    	
+    	/* Changing wool names. */
+    	case "whit": name = "White wool"; break;
+    	case "ora": name = "Orange wool"; break;
+    	case "mag": name = "Magenta wool"; break;
+    	case "blue": name = "Light blue wool"; break;
+    	case "yell": name = "Yellow wool"; break;
+    	case "gree": name = "Lime wool"; break;
+    	case "pink": name = "Pink wool"; break;
+    	case "gray": name = "Gray wool"; break;
+    	case "grey": name = "Gray wool"; break;
+    	case "gre": name = "Light gray wool"; break;
+    	case "gra": name = "Light gray wool"; break;
+    	case "cya": name = "Cyan wool"; break;
+    	case "pur": name = "Purple wool"; break;
+    	case "blu": name = "Blue wool"; break;
+    	case "brow": name = "Brown wool"; break;
+    	case "": name = "Green wool"; break;
+    	case "": name = "Red wool"; break;
+    	case "": name = "Black wool"; break;
+    	default: name = name + ""; break;
     	}
     }
 }
