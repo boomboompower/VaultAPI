@@ -167,8 +167,8 @@ public class Items {
         items.add(new ItemInfo(new String[][]{{"wool", "blu"}}, Material.WOOL, (short) 11));
         items.add(new ItemInfo(new String[][]{{"wool", "brow"}}, Material.WOOL, (short) 12));
         items.add(new ItemInfo("Dark Green Wool", new String[][]{{"wool", "dar", "gree"}, {"wool", "gree"}}, Material.WOOL, (short) 13));
-        items.add(new ItemInfo("Red Wool", new String[][]{{"wool", "red"}}, Material.WOOL, (short) 14));
-        items.add(new ItemInfo("Black Wool", new String[][]{{"wool", "bla"}}, Material.WOOL, (short) 15));
+        items.add(new ItemInfo(new String[][]{{"wool", "red"}}, Material.WOOL, (short) 14));
+        items.add(new ItemInfo(new String[][]{{"wool", "bla"}}, Material.WOOL, (short) 15));
         items.add(new ItemInfo("Dandelion", new String[][]{{"flow", "yell"}, {"dande"}}, Material.YELLOW_FLOWER));
         items.add(new ItemInfo("Brown Mushroom", new String[][]{{"mush", "bro"}}, Material.BROWN_MUSHROOM));
         items.add(new ItemInfo("Red Mushroom", new String[][]{{"mush", "red"}}, Material.RED_MUSHROOM));
