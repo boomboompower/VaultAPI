@@ -35,7 +35,6 @@ public class ItemInfo {
     	String name = LocaleI18n.get(NMSName);
     	
     	testName(name, search);
-    	if (material.equals(Material.WOOL)) tryWool(name, material, (short) 0);
     	
         this.material = material;
         this.name = name;
@@ -119,13 +118,6 @@ public class ItemInfo {
         }
     }
     
-    public void tryWool(String name, Material material, short type) {
-    	if (!material.equals(Material.WOOL)) return;
-    	switch(type) {
-    	
-    	}	
-    }
-    
     public void testName(String name, String[][] args) {
     	switch(args.toString().toLowerCase()) {
     	
@@ -153,9 +145,11 @@ public class ItemInfo {
     	case "pur": name = "Purple wool"; break;
     	case "blu": name = "Blue wool"; break;
     	case "brow": name = "Brown wool"; break;
-    	case "": name = "Green wool"; break;
-    	case "": name = "Red wool"; break;
-    	case "": name = "Black wool"; break;
+//    	
+//    	Coming soon.
+//    	case "": name = "Green wool"; break;
+    	case "red": name = "Red wool"; break;
+    	case "bla": name = "Black wool"; break;
     	default: name = name + ""; break;
     	}
     }
